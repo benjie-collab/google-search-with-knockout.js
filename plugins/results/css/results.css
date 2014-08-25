@@ -1,0 +1,101 @@
+  .js-mindmap-active .node {
+    position:absolute;
+    top:0;
+    left:0;
+    font-size:10px;
+    /**color:#003258;
+    background:#C1D1E0;**/
+        opacity:0.9;
+    /**padding:10px;**/
+    /**border:1px solid #A1B1D0;**/
+    -webkit-border-radius:100px;
+    -moz-border-radius:100px;
+	border-radius:100px;
+    cursor:pointer;
+    cursor:hand;
+    z-index:100;
+    list-style:none;
+        width:80px;
+	text-align: center;
+	line-height: normal;
+	
+  }
+  
+  .node.mind-map-root  { width:100px; font-size: 12px;}
+  
+  .js-mindmap-active .node  p{
+    color:#fff!important;
+	margin: 0;
+	text-transform: uppercase;
+  }
+  .js-mindmap-active .node.active, .js-mindmap-active .node:hover{
+    /**background:#EAEFF5;
+    color:#003258;**/
+	font-size:12;
+    z-index:1000;
+	
+  }
+  
+  
+  .js-mindmap-active .node.active  a{
+    /**color:#003258;**/
+  }
+  .js-mindmap-active img.line {
+    position:absolute;
+    width:200px;
+    height:133px;
+    top:0;
+    left:0;
+    display:block;
+    z-index:0;
+  }
+    .ui-draggable {
+        position:absolute;
+    }
+	
+	.js-mindmap-active .node .node-info {
+		position: absolute;
+		top: 5px;
+		right: 14px;
+		display: none;
+	}
+		.js-mindmap-active .node .node-info .node-info-action{
+			position: absolute;
+			font-size: 13px;
+			
+		}
+		.js-mindmap-active .node .node-info .popover { width: 250px;}
+		
+		.js-mindmap-active .node .node-info .node-info-action:nth-child(1){
+			margin: 0 0 0 -4px;
+		}
+		.js-mindmap-active .node .node-info .node-info-action:nth-child(2){
+			margin: 14px 0 0 -1px;
+		}
+		.js-mindmap-active .node .node-info .node-info-action:nth-child(3){
+			margin: 28px 0 0 -4px;
+		}
+		.js-mindmap-active .node .node-info .node-info-action:nth-child(4){
+			margin: 39px 0 0 -13px;
+		}
+		.js-mindmap-active .node .node-info .node-info-action:nth-child(5){
+			margin: 45px 0 0 -26px;
+		}
+		.js-mindmap-active .node .label { position: absolute; top: 0; left: 50%; font-size: 120%}
+		
+	.js-mindmap-active .node:hover .img-circle{
+		border : 2px solid rgba(51,51,51, .8);
+	  }
+	.js-mindmap-active .node  .img-circle{ 
+		border : 2px solid rgba(51,51,51, 0.1);
+		height: 50px; width: 50px;
+		-webkit-border-radius:100%;
+		-moz-border-radius:100%;
+		border-radius: 100%;
+		overflow: hidden;
+		display: inline-block;
+		}
+		
+		
+	.legend.node-red{}
+	.legend.node-yellow{}

@@ -1,0 +1,243 @@
+{
+	"sitename": "OmniMalaysia",
+	"sitedescription": "Indonesia Educational Institution",
+	"sitefolder": "/templates/lzt",
+	"currentpage": "",
+	"skins":[{
+			"name": "skin-blur-violate",
+			"image": "img/body/skin-violate.jpg"
+			},
+			{
+			"name": "skin-blur-lights",
+			"image": "img/body/skin-lights.jpg"
+			},
+			{
+			"name": "skin-blur-city",
+			"image": "img/body/skin-city.jpg"
+			},
+			{
+			"name": "skin-blur-greenish",
+			"image": "img/body/skin-greenish.jpg"
+			},
+			{
+			"name": "skin-blur-night",
+			"image": "img/body/skin-night.jpg"
+			},
+			{
+			"name": "skin-blur-blue",
+			"image": "img/body/skin-blue.jpg"
+			},
+			{
+			"name": "skin-blur-sunny",
+			"image": "img/body/skin-sunny.jpg"
+			},
+			{
+			"name": "skin-cloth",
+			"image": "img/body/skin-cloth.jpg"
+			},
+			{
+			"name": "skin-tectile",
+			"image": "img/body/skin-tectile.jpg"
+			},
+			{
+			"name": "skin-blur-chrome",
+			"image": "img/body/skin-chrome.jpg"
+			},
+			{
+			"name": "skin-blur-ocean",
+			"image": "img/body/skin-ocean.jpg"
+			},
+			{
+			"name": "skin-blur-sunset",
+			"image": "img/body/skin-sunset.jpg"
+			},
+			{
+			"name": "skin-blur-yellow",
+			"image": "img/body/skin-yellow.jpg"
+			},
+			{
+			"name": "skin-blur-kiwi",
+			"image": "img/body/skin-kiwi.jpg"
+			},
+			{
+			"name": "skin-black_pattern01",
+			"image": "img/body/skin-black_pattern01.jpg"
+			},
+			{
+			"name": "skin-black_pattern02",
+			"image": "img/body/skin-black_pattern02.jpg"
+			},
+			{
+			"name": "skin-black_pattern03",
+			"image": "img/body/skin-black_pattern03.jpg"
+			},
+			{
+			"name": "skin-black_pattern04",
+			"image": "img/body/skin-black_pattern04.jpg"
+			},
+			{
+			"name": "skin-black_pattern05",
+			"image": "img/body/skin-black_pattern05.jpg"
+			},
+			{
+			"name": "skin-black_pattern06",
+			"image": "img/body/skin-black_pattern06.jpg"
+			},
+			{
+			"name": "skin-black_pattern07",
+			"image": "img/body/skin-black_pattern07.jpg"
+			},
+			{
+			"name": "skin-black_pattern08",
+			"image": "img/body/skin-black_pattern08.jpg"
+			},
+			{
+			"name": "skin-black_pattern09",
+			"image": "img/body/skin-black_pattern09.jpg"
+			},
+			{
+			"name": "skin-black_pattern10",
+			"image": "img/body/skin-black_pattern10.jpg"
+			},
+			{
+			"name": "skin-black_pattern11",
+			"image": "img/body/skin-black_pattern11.jpg"
+			},
+			{
+			"name": "skin-black_pattern12",
+			"image": "img/body/skin-black_pattern12.jpg"
+			}],
+	"languages"	: {
+					"instance"	: null,
+					"enabled"	: true,
+					"selected"	: null,									
+					"languages" : {
+									"english" :
+									{ 	
+										"code"	: "en"
+									},
+									"malay" :
+									{ 	
+										"code"	: "my",
+										"pack"	: "my.json"
+									},
+									"thai" :
+									{ 	
+										"code"	: "th",
+										"pack"	: "th.json"
+									}
+								}
+					
+					},	
+	"sidebar" 	: false,
+	"chat"		: false,
+	"plugins"	: [
+					{
+					"enabled": true,
+					"name": "search",
+					"container": "#search-container",
+					"url": "plugins/search/index.html",
+					"subplugins": [
+									{
+									"enabled": true,
+									"name": "results",
+									"container": "#results-container",
+									"url": "plugins/results/index.html"
+									},
+									{
+									"enabled": true,
+									"name": "filters",
+									"container": "#filters-container",
+									"url": "plugins/filters/index.html"
+									},
+									{
+									"enabled": true,
+									"name": "wikipedia",
+									"container": "#wikipedia-container",
+									"url": "plugins/wikipedia/index.html"
+									},
+									{
+									"enabled": true,
+									"name": "mindmap",
+									"container": "#mindmap-container",
+									"url": "plugins/mindmap/index.html"
+									}					
+									]
+					},
+					{
+					"enabled": true,
+					"name": "language",
+					"container": "#language-container",
+					"url": "plugins/language/index.html"
+					}					
+					],
+	"search"	: {
+						"query"		: "",
+						"sources"	: "source1, source2, source3",
+						"sort"		: "score::asc",
+						"dfrom"		: "31-01-2010",
+						"dto"		: "31-12-2014"
+					},
+	"filters"	: {
+					"fields":	{
+								"contentType"	: [],
+								"size" 			: [],
+								"language" 		: [],
+								"source" 		: [],
+								"agency"		: [],
+								"ministry" 		: []
+							},
+					"categories":	
+								[
+								{ "name"	: "news",
+								  "values"	: [ "latest", "nation", "regional", "world", "community", "environment", "education", "inOtherMedia" ] },
+								{ "name"	: "business",
+								  "values" 	: []},
+								{ "name"	: "tech",
+								  "values" 	: []},
+								{ "name"	: "lifestyle",
+								  "values" 	: []},
+								{ "name"	: "travel",
+								  "values" 	: []},
+								{ "name"	: "opinion",
+								  "values" 	: []},
+								{ "name"	: "more",
+								  "values" 	: []}
+								]
+							
+	
+					},
+	"wikipedia"		: {
+						"enabled"	: true,
+						"url"		: "http://en.wikipedia.org/w/api.php?",
+						"params"	: {
+							"action"	: "query",
+							"prop"		: "extracts|pageimages",
+							"format"	: "json",
+							"exchars"	: 250,
+							"exlimit"	: 10,
+							"exintro"	: "",
+							"excontinue": "continue",							
+							"piprop"	: "thumbnail",
+							"pithumbsize": 120,
+							"pilimit"	: 10,							
+							"titles"	: "Apple",
+							"generator" : "search",
+							"gsrsearch" : "Apple",
+							"gsrlimit" 	: 10
+						}
+					},
+	
+	"server"	:  {						
+						"url"	: "/xquery/src/",
+						"port"	: ""
+					},
+	"mapstyles"	:	{
+						"midnightCommander": [{"featureType":"water","stylers":[{"color":"#021019"}]},{"featureType":"landscape","stylers":[{"color":"#08304b"}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#0c4152"},{"lightness":5}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#0b434f"},{"lightness":25}]},{"featureType":"road.arterial","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"road.arterial","elementType":"geometry.stroke","stylers":[{"color":"#0b3d51"},{"lightness":16}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"elementType":"labels.text.stroke","stylers":[{"color":"#000000"},{"lightness":13}]},{"featureType":"transit","stylers":[{"color":"#146474"}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#144b53"},{"lightness":14},{"weight":1.4}]}],
+						"neutralBlue": [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#193341"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#2c5a71"}]},{"featureType":"road","elementType":"geometry","stylers":[{"color":"#29768a"},{"lightness":-37}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#406d80"}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#3e606f"},{"weight":2},{"gamma":0.84}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"weight":0.6},{"color":"#1a3541"}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"poi.park","elementType":"geometry","stylers":[{"color":"#2c5a71"}]}],
+						"shadesOfGrey": [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"road.highway","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":17}]},{"featureType":"road.highway","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":29},{"weight":0.2}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":18}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":16}]},{"featureType":"poi","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":21}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"on"},{"color":"#000000"},{"lightness":16}]},{"elementType":"labels.text.fill","stylers":[{"saturation":36},{"color":"#000000"},{"lightness":40}]},{"elementType":"labels.icon","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#000000"},{"lightness":19}]},{"featureType":"administrative","elementType":"geometry.fill","stylers":[{"color":"#000000"},{"lightness":20}]},{"featureType":"administrative","elementType":"geometry.stroke","stylers":[{"color":"#000000"},{"lightness":17},{"weight":1.2}]}],
+						"lunarLandscape" : [{"stylers":[{"hue":"#ff1a00"},{"invert_lightness":true},{"saturation":-100},{"lightness":33},{"gamma":0.5}]},{"featureType":"water","elementType":"geometry","stylers":[{"color":"#2D333C"}]}],
+						"snazzyMaps": [{"featureType":"water","elementType":"geometry","stylers":[{"color":"#333739"}]},{"featureType":"landscape","elementType":"geometry","stylers":[{"color":"#2ecc71"}]},{"featureType":"poi","stylers":[{"color":"#2ecc71"},{"lightness":-7}]},{"featureType":"road.highway","elementType":"geometry","stylers":[{"color":"#2ecc71"},{"lightness":-28}]},{"featureType":"road.arterial","elementType":"geometry","stylers":[{"color":"#2ecc71"},{"visibility":"on"},{"lightness":-15}]},{"featureType":"road.local","elementType":"geometry","stylers":[{"color":"#2ecc71"},{"lightness":-18}]},{"elementType":"labels.text.fill","stylers":[{"color":"#ffffff"}]},{"elementType":"labels.text.stroke","stylers":[{"visibility":"off"}]},{"featureType":"transit","elementType":"geometry","stylers":[{"color":"#2ecc71"},{"lightness":-34}]},{"featureType":"administrative","elementType":"geometry","stylers":[{"visibility":"on"},{"color":"#333739"},{"weight":0.8}]},{"featureType":"poi.park","stylers":[{"color":"#2ecc71"}]},{"featureType":"road","elementType":"geometry.stroke","stylers":[{"color":"#333739"},{"weight":0.3},{"lightness":10}]}]
+					}
+					
+}

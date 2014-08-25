@@ -1,0 +1,48 @@
+{
+	"plugins"	: [
+					{
+					"enabled": true,
+					"name": "search",
+					"container": "#search-container",
+					"url": "plugins/search/index.html",
+					"subplugins": [
+									{
+									"enabled": true,
+									"name": "results",
+									"container": "#results-container",
+									"url": "plugins/results/index.html"
+									},
+									{
+									"enabled": true,
+									"name": "filters",
+									"container": "#filters-container",
+									"url": "plugins/filters/index.html"
+									},
+									{
+									"enabled": true,
+									"name": "wikipedia",
+									"container": "#wikipedia-container",
+									"url": "plugins/wikipedia/index.html"
+									},
+									{
+									"enabled": true,
+									"name": "mindmap",
+									"container": "#mindmap-container",
+									"url": "plugins/mindmap/index.html"
+									},
+									{
+									"enabled": false,
+									"name": "annotator",
+									"container": "#annotator-container",
+									"url": "plugins/annotator-full.1.2.9/index.html"
+									}					
+									]
+					},
+					{
+					"enabled": true,
+					"name": "language",
+					"container": "#language-container",
+					"url": "plugins/language/index.html"
+					}					
+					]
+}

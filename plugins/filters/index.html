@@ -1,0 +1,261 @@
+<div class="row ">
+	<div class="col-sm-12 hidden-xs">	
+		<a class="btn btn-primary pull-right" href="#regionsModal" data-toggle="modal" style="width: 100%">
+			<span lang="en">Categories</span><span class="caret"></span>
+		</a>
+	</div> 
+	<div data-backdrop="false" 
+		data-keyboard="false" 
+		id="regionsModal"
+		class="bs-countries-modal-sm  hidden-xs" 
+		tabindex="-1" role="dialog" 
+		aria-labelledby="regionsModal"
+		aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="directory-counties">
+					<div class="col-sm-12">
+						<ul class="nav nav-tabs" id="myTab" data-bind="foreach: categories">
+							<li class="text-capitalize" data-bind="css: { active: $index() === 0 }" ><a data-toggle="tab"  data-bind="text: name, attr: { href: '#cat' + name}" data-parent="#myTab">News</a></li>							
+						</ul>
+						<div class="tab-content " id="myTabContent" data-bind="foreach: categories">
+							<div id="catnews" class="tab-pane fade counties-pane" data-bind="attr: { id: 'cat' + name}, css: { 'active in': $index() === 0 }">
+								<div class="col-sm-3">
+									<div class="row directory-block">
+										<div class="col-sm-12" data-bind="foreach: $data.values">
+											<a href="#" class="text-capitalize" data-bind="text: $data">Latest</a><br />
+										</div>
+									</div>
+								</div>
+							</div><!--
+							<div id="catbusiness" class="tab-pane fade counties-pane"></div>
+							<div id="catsport" class="tab-pane fade counties-pane"></div>
+							<div id="cattech" class="tab-pane fade counties-pane"></div>
+							<div id="catlifestyle" class="tab-pane fade counties-pane"></div>
+							<div id="cattravel" class="tab-pane fade counties-pane"></div>
+							<div id="catopinion" class="tab-pane fade counties-pane"></div>-->
+						</div>
+					</div>
+
+
+				</div>
+			</div>
+		</div>
+	</div>
+</div>        
+<br />
+
+<div class="row ">
+
+	<div class="col-sm-12">
+
+		<div class="panel panel-default">
+			<div class="panel-heading">Filters</div>
+			<div class="panel-body">
+				<form class="form-inline mini" style="margin-bottom: 0px;">
+					<fieldset>				
+
+						<div class="row filter-row">
+							<div class="col-sm-6">
+								<label>Content Type</label>
+							</div>
+							<div class="col-sm-6">
+								<select class=" form-control ">
+									<option>Any</option>
+									<option>Alfa romeo</option>
+									<option>Houses</option>
+									<option>Flats/ Apartments</option>
+									<option>Bungalows</option>
+									<option>Land</option>
+									<option>Commercial property</option>
+									<option>Other</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="row filter-row">
+							<div class="col-sm-6">
+								<label>Size</label>
+							</div>
+							<div class="col-sm-6">
+								<select class="col-sm-10 form-control ">
+									<option>Any</option>
+									<option>Alfa romeo</option>
+									<option>Houses</option>
+									<option>Flats/ Apartments</option>
+									<option>Bungalows</option>
+									<option>Land</option>
+									<option>Commercial property</option>
+									<option>Other</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="row filter-row">
+							<div class="col-sm-6">
+								<label>Language</label>
+							</div>
+							<div class="col-sm-6">
+								<select class="col-sm-10 form-control ">
+									<option>Any</option>
+									<option>Alfa romeo</option>
+									<option>Houses</option>
+									<option>Flats/ Apartments</option>
+									<option>Bungalows</option>
+									<option>Land</option>
+									<option>Commercial property</option>
+									<option>Other</option>
+								</select>
+							</div>
+						</div>
+						<div class="row filter-row">
+							<div class="col-sm-6">
+								<label>Source</label>
+							</div>
+							<div class="col-sm-6">
+								<select class="col-sm-10 form-control ">
+									<option>Any</option>
+									<option>Alfa romeo</option>
+									<option>Houses</option>
+									<option>Flats/ Apartments</option>
+									<option>Bungalows</option>
+									<option>Land</option>
+									<option>Commercial property</option>
+									<option>Other</option>
+								</select>
+							</div>
+						</div>
+						<div class="row filter-row">
+							<div class="col-sm-6">
+								<label>Agency</label>
+							</div>
+							<div class="col-sm-6">
+								<select class="col-sm-10 form-control ">
+									<option>Any</option>
+									<option>Alfa romeo</option>
+									<option>Houses</option>
+									<option>Flats/ Apartments</option>
+									<option>Bungalows</option>
+									<option>Land</option>
+									<option>Commercial property</option>
+									<option>Other</option>
+								</select>
+							</div>
+						</div>
+						<div class="row filter-row">
+							<div class="col-sm-6">
+								<label>Ministry</label>
+							</div>
+							<div class="col-sm-6">
+								<select class="col-sm-10 form-control ">
+									<option>Any</option>
+									<option>Alfa romeo</option>
+									<option>Houses</option>
+									<option>Flats/ Apartments</option>
+									<option>Bungalows</option>
+									<option>Land</option>
+									<option>Commercial property</option>
+									<option>Other</option>
+								</select>
+							</div>
+						</div>
+
+						<div class="row filter-row">
+							<div class="col-sm-12">
+								<label>Date Range</label>
+							</div>
+							<div class="col-sm-6">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+									<input type="email" class="form-control price-input" placeholder="from" />
+								</div>
+							</div>
+							<div class="col-sm-6">
+								<div class="input-group">
+									<span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+									<input type="email" class="form-control price-input" placeholder="to" />
+								</div>
+							</div>
+						</div>
+						<div class="row filter-row">
+							<div class="col-sm-12">
+								<label>Search only:</label>
+							</div>
+							<div class="col-sm-12">
+								<div class="radio">
+									<label>
+										<input type="radio" name="optionsRadios" value="option1" checked>
+										Announcements
+									</label>
+								</div><br />
+
+								<div class="radio">
+									<label>
+										<input type="radio" name="optionsRadios" value="option2">
+										News
+									</label>
+								</div><br />
+
+								<div class="radio">
+									<label>
+										<input type="radio" name="optionsRadios" value="option2">
+										Documents
+									</label>
+								</div>
+								<div class="radio">
+									<label>
+										<input type="radio" name="optionsRadios" value="option2">
+										Contact Information
+									</label>
+								</div>
+							</div>
+						</div>
+
+						<div class="row filter-row">	
+
+							<div class="col-sm-2 pull-right" style="margin-top: 10px;">
+								<button class="btn btn-primary pull-right" type="submit">Update results</button>
+
+							</div>
+						</div>						
+
+
+					</fieldset>
+				</form>
+			</div>
+		</div>
+
+
+	</div>
+</div>
+
+<script type="text/javascript">
+	/**
+	var stylesheet;	
+	if ($('#mindmap-stylehsheet').length === 0) {
+			stylesheet = document.createElement( 'link' );
+			stylesheet.id = 'mindmap-stylehsheet';
+			stylesheet.rel = 'stylesheet';
+			stylesheet.type = 'text/css';
+			stylesheet.href = 'plugins/mindmap/css/mindmap.css';
+			$("head").append( stylesheet );
+	}	
+	**/
+	
+	var script;
+	if ($('#filters-script').length === 0) {
+			script = document.createElement( 'script' );
+			script.id = 'filters-script';
+			script.type = 'text/javascript';
+			script.src = 'plugins/filters/js/filters.js';
+			$("body").append( script );
+	}
+	
+	var opts = {
+				container: "#"
+				}
+	ko.cleanNode($('#filters-container')[0]); // clean it
+	ko.applyBindings(new filtersModel(opts), $('#filters-container')[0]);	
+	
+		
+</script>

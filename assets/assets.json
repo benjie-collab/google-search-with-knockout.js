@@ -1,0 +1,10 @@
+{
+	"assets"	:[
+					{
+					"enabled": true,
+					"name": "annotator",
+					"url": "assets/annotator-full.1.2.9/annotator.js"
+					}
+
+				]
+}
