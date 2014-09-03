@@ -11,11 +11,55 @@ Version: 0.1
 
 define('bxtgooglesearch', WP_PLUGIN_URL."/".dirname( plugin_basename( __FILE__ ) ) );
 
+$bxttoptions = get_option( 'bxt_options' );
 
-function bxtsrch_enqueuelib() {
-	wp_enqueue_script('knockoutjs', bxtgooglesearch.'/lib/knockout-3.1.0.js', array('jquery'));	
+
+/********************************
+* Includes
+********************************/
+
+
+include( dirname( __FILE__ ) . '/includes/scripts.php');
+include( dirname( __FILE__ ) . '/includes/process-ajax.php');
+include( dirname( __FILE__ ) . '/includes/admin-page.php');
+
+
+include( plugin_dir_path( __FILE__ ) . 'widget-images.php');
+include( plugin_dir_path( __FILE__ ) . 'widget-videos.php');
+include( plugin_dir_path( __FILE__ ) . 'widget-blog.php');
+include( plugin_dir_path( __FILE__ ) . 'widget-news.php');
+include( plugin_dir_path( __FILE__ ) . 'widget-books.php');
+include( plugin_dir_path( __FILE__ ) . 'widget-patent.php');
+
+
+
+/** GET json from external
+
+$url = 'http://192.168.2.175:8016/xquery/src/getmappoints.xqy?radius=200&type=json&legend=crisis&geometric=polygon&geo=&subcategory=';
+
+
+$body = array(
+    'auth_token' => 'xxxxxx',
+    'list_id' => 'xxxxx',
+    'name' => 'Office',
+    'campaign_id' => 'xxxxx',
+);
+
+$response = wp_remote_post($url, array(
+    'body'=>$body, 
+    'sslverify' => false // this is needed if your server doesn't have the latest CA certificate lists
+    ) );
+if ( is_wp_error( $response ) || 200 != wp_remote_retrieve_response_code( $response ) ) {
+    // error handling goes here
 }
-add_action('wp_enqueue_scripts', bxtsrch_enqueuelib);
+$results = wp_remote_retrieve_body( $response );
+// $results has the actual results in it
+
+GET json from external **/
+
+
+
+
 
 /**
 
@@ -147,13 +191,11 @@ function bxtsrch_result(){
 function fn_bxtsrch_result( $atts ){
     return bxtsrch_result();	
 }
-add_shortcode( 'bxtsrch_result', 'fn_bxtsrch_result' );**/
+add_shortcode( 'bxtsrch_result', 'fn_bxtsrch_result' );
 
 
 
 
-global  $bxttoptions;
-$bxttoptions = get_option( 'bxtsrch_options' );
 
 function search_enqueuescripts(){	
 	$bxttoptions['search']['s'] =  (get_search_query() !== ""? get_search_query() : '' ); 
@@ -168,7 +210,7 @@ function search_enqueuescripts(){
 			
 		wp_enqueue_script(array('jquery', 'bxtsrch_wiki_ext'));
 		wp_enqueue_script(array('jquery', 'bxtsrch_wiki'));		
-		wp_localize_script( 'bxtsrch_js_search', 'bxtsrch_options', $bxttoptions);
+		wp_localize_script( 'bxtsrch_js_search', 'bxt_options', $bxttoptions);
 		wp_enqueue_script(array('jquery', 'bxtsrch_js_search'));
 		wp_enqueue_script(array('jquery', 'bxtsrch_model_search'));		
 		
@@ -177,25 +219,57 @@ function search_enqueuescripts(){
 
 	}	
 }
-add_action('wp_enqueue_scripts', search_enqueuescripts);
-
-
-
-
-include( plugin_dir_path( __FILE__ ) . 'widget-images.php');
-include( plugin_dir_path( __FILE__ ) . 'widget-videos.php');
-include( plugin_dir_path( __FILE__ ) . 'widget-blog.php');
-include( plugin_dir_path( __FILE__ ) . 'widget-news.php');
-include( plugin_dir_path( __FILE__ ) . 'widget-books.php');
-include( plugin_dir_path( __FILE__ ) . 'widget-patent.php');
-
-
-include( plugin_dir_path( __FILE__ ) . 'admin/administrator.php');
+add_action('wp_enqueue_scripts', search_enqueuescripts);**/
 
 
 
 
 
+	
+function bgs_install(){
+
+	$bxttoptions = get_option( 'bxt_options' );	
+	if(!isset($bxttoptions)){
+		$opts = array(
+			"features" 	=> array(
+						"WebSearch"		,
+						"VideoSearch"	,
+						"BlogSearch"	,
+						"NewsSearch"	,
+						"ImageSearch"	,
+						"BookSearch"	,
+						"PatentSearch"	),
+			"active" 	=> array(),
+			"key"		=> ""
+		
+		);
+		
+		add_option('bxt_options', $opts);	
+	
+	}
+}
+register_activation_hook(__FILE__, 'bgs_install');
+
+/**
+update_option('bxt_options', array(
+			"features" 	=> array(
+						"WebSearch"		,
+						"VideoSearch"	,
+						"BlogSearch"	,
+						"NewsSearch"	,
+						"ImageSearch"	,
+						"BookSearch"	,
+						"PatentSearch"	),
+			"active" 	=> array(),
+			"key"		=> ""
+		
+		));**/
+
+/**
+
+
+
+include( plugin_dir_path( __FILE__ ) . 'admin/administrator.php');**/
 
 
 

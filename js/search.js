@@ -5,7 +5,6 @@ jQuery(document).ready(function(){
 
 	
 	
-	
 	ko.bindingHandlers.gridGallery = {
 		cbpgg : ko.observable() ,
 		init: function(element, valueAccessor){	
@@ -253,7 +252,7 @@ jQuery(document).ready(function(){
 	
 	
 	ko.applyBindings(viewModel);	
-	viewModel.s(bxtsrch_options.search.s);
+	viewModel.s(bxt_options.s);
 	
 	
 });
